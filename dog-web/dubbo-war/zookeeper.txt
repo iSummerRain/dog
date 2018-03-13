@@ -1,0 +1,58 @@
+========== zk 节点安装 ============
+
+1、创建dubbo所需zk目录：
+[root@ibm home]# mkdir dubbo
+[root@ibm home]# cd dubbo
+
+2、到http://apache.fayea.com/zookeeper/下载zookeeper-3.4.6：
+[root@ibm dubbo]# wgethttp://apache.fayea.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
+
+3、解压zookeeper安装包并创建zk所需的数据目录和日志目录：
+[root@ibm dubbo]# tar -zxvf zookeeper-3.4.6.tar.gz
+[root@ibm dubbo]# cd zookeeper-3.4.6
+[root@ibm zookeeper-3.4.6]# mkdir data
+[root@ibm zookeeper-3.4.6]# mkdir log
+
+4、将zookeeper-3.4.6/conf目录下的zoo_sample.cfg文件拷贝一份，命名为为zoo.cfg
+[root@ibm conf]# cp zoo_sample.cfg zoo.cfg
+
+5、修改zoo.cfg配置文件，并保存退出：
+
+[root@ibm conf]# vi zoo.cfg
+
+dataDir=/home/dubbo/zookeeper-3.4.6/data
+dataLogDir=/home/dubbo/zookeeper-3.4.6/log
+
+clientPort=2181
+server.1=192.168.72.130:2888:3888
+
+
+6、在dataDir=/home/dubbo/zookeeper-3.4.6/data下创建myid文件设置为1并保存退出
+[root@ibm data]# vi myid
+1
+
+7、打开防火墙端口 2181、2888、3888
+[root@ibm data]# service iptables status
+
+[root@ibm data]# vi /etc/sysconfig/iptables
+
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 2181 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 2888 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 3888 -j ACCEPT
+
+[root@ibm data]# service iptables restart
+
+
+8、启动zk：
+[root@ibm bin]# ./zkServer.sh start
+
+[root@ibm bin]# jps
+5263 QuorumPeerMain
+5295 Jps
+
+9、zk日志：
+[root@ibm bin]# cd /home/dubbo/zookeeper-3.4.6/bin
+[root@ibm bin]# tail -f zookeeper.out
+
+
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.dog</groupId>
+	<artifactId>dog</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>dog</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository 2.0.0.RELEASE 1.5.7.RELEASE-->
+	</parent>
+
+	<!-- 模块说明：这里声明多个子模块 -->
+	<modules>
+		<module>dog-web</module>
+		<module>dog-service</module>
+		<module>dog-domain</module>
+		<module>dog-utils</module>
+        <module>dog-beans</module>
+        <module>dog-dubbo-api</module>
+    </modules>
+
+	<!-- 设置项目版本属性 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<dubbo.version>2.5.3</dubbo.version>
+		<zkclient.version>0.10</zkclient.version>
+		<lombok.version>1.16.18</lombok.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+            <!-- Son Module Start -->
+			<dependency>
+				<groupId>com.dog</groupId>
+				<artifactId>dog-web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.dog</groupId>
+				<artifactId>dog-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.dog</groupId>
+				<artifactId>dog-domain</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.dog</groupId>
+				<artifactId>dog-utils</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+            <dependency>
+                <groupId>com.dog</groupId>
+                <artifactId>dog-beans</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dog</groupId>
+                <artifactId>dog-dubbo-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <!-- Son Module End -->
+
+			<!-- 使用lombok实现JavaBean的get、set、toString、hashCode、equals等方法的自动生成  -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- Dubbo依赖 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
+
+			<!-- zookeeper的客户端依赖 -->
+			<dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+			</dependency>
+
+            <!-- Spring Boot Start
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+			</dependency>-->
+            <!-- Spring Boot End -->
+		</dependencies>
+
+	</dependencyManagement>
+
+</project>

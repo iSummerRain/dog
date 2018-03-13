@@ -1,0 +1,65 @@
+========== dubbo 安装部署 http://dubbo.io/books/dubbo-user-book/ ============
+
+1、下载tomcat7并解压：
+[root@ibm dubbo]# tar -zxvf apache-tomcat-7.0.57.tar.gz
+
+=====重命名为 dubbo-admin-tomcat
+[root@ibm dubbo]# mv apache-tomcat-7.0.57 dubbo-admin-tomcat
+
+2、删除 /home/dubbo/dubbo-admin-tomcat/webapps 目录下文件
+[root@ibm dubbo]# cd /home/dubbo/dubbo-admin-tomcat/webapps
+
+[root@ibm webapps]# rm -rf *
+
+3、上传Dubbo管理控制台程序 dubbo-admin-2.5.3.war 到webapps目录下：
+
+4、解压并把目录命名为ROOT:
+
+[root@ibm webapps]# unzip dubbo-admin-2.5.3.war -d ROOT
+
+5、配置dubbo.properties：（以下密码在正式上生产前要修改）
+
+[root@ibm webapps]# vi ROOT/WEB-INF/dubbo.properties
+
+dubbo.registry.address=zookeeper://192.168.72.130:2181
+dubbo.admin.root.password=dog123
+dubbo.admin.guest.password=dog123
+
+6、防火墙开启tomcat 8080端口：
+
+[root@ibm WEB-INF]#  vi /etc/sysconfig/iptables
+
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+
+[root@ibm data]# service iptables restart
+
+[root@ibm data]# service iptables status
+
+7、启动Tomat：
+[root@ibm bin]# chmod 777 *.sh
+[root@ibm bin]# ./startup.sh
+
+[root@ibm bin]# jps
+5584 Jps
+5573 Bootstrap
+5263 QuorumPeerMain
+
+[root@ibm bin]# cd /home/dubbo/dubbo-admin-tomcat/bin
+
+
+8、访问dubbo（dubbo启动有些慢...）： http://192.168.72.130:8080/
+
+
+输入用户密码：root/dog123
+
+
+
+========= 目前dubbo 版本只支持jdk7 不支持8+以上版本 ============= 
+
+[root@ibm logs]# java -version
+
+[root@ibm logs]# vi /etc/profile
+
+[root@ibm logs]# source /etc/profile
+
+[root@ibm dubbo]# tar -zxvf jdk-7u80-linux-x64.tar.gz

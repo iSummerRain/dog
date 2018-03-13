@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dog-beans" />
+        <module name="dog-domain" />
+        <module name="dog-dubbo-api" />
+        <module name="dog-service" />
+        <module name="dog-utils" />
+        <module name="dog-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dog" target="1.8" />
+      <module name="dog-beans" target="1.8" />
+      <module name="dog-domain" target="1.8" />
+      <module name="dog-dubbo-api" target="1.8" />
+      <module name="dog-service" target="1.8" />
+      <module name="dog-utils" target="1.8" />
+      <module name="dog-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

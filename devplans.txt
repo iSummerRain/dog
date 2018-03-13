@@ -1,0 +1,41 @@
+======== 大概说明 ========
+最新的spring-boot官方2.0.0.RELEASE给的开发环境
+A、JDK要求7以上,建议使用8以上版本。
+B、maven官方3.3.9的版本。
+C、开发集成环境 eclipse或Intellij IDEA
+ps：官方的demo坑有点多，慢慢踩~~~~
+================
+
+1、完成spring-boot框架基本搭建
+    1.1、使用JPA对关系数据库mysql进行CRUD & page、 sort （完成）
+    1.2、使用JDBCTEMPLATE对数据库操作（完成）
+    1.3、自定义配置文件引入并封装成bean以组件方式调用（完成）
+
+2、redis集成（未完成）
+
+3、kafka、ActiveMQ 集成（未完成）
+
+4、solr、es集成（未完成）
+
+5、shiro 集成（未完成）
+
+6、dubbo集成(单节点、未配置集群)，引入服务治理，目的将web层和service彻底解耦（完成）
+    6.1 dubbo环境搭建 (官网http://dubbo.io/)
+        https://github.com/alibaba/dubbo
+        https://github.com/dubbo/dubbo-spring-boot-project
+        http://apache.fayea.com/zookeeper/
+        Dubbo 不单单只是高性能的 RPC 调用框架，更是 SOA 服务治理的一种方案。
+        核心：
+        a. 远程通信，向本地调用一样调用远程方法。
+        b. 集群容错
+        c. 服务自动发现和注册（zk），可平滑添加或者删除服务提供者。
+
+    6.2 dog项目引入zk、dubbo:（完成）
+        安装dubbo前务必保证zk安装完成。（完成）
+        安装步骤(略)-安装部署已放置项目工程中。
+
+    6.3 dog项目web和service层解耦，web为服务调用方，service为服务提供方。（完成）
+        domain层支持jdbc和jpa方式
+
+
+

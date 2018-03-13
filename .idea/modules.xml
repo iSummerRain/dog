@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dog.iml" filepath="$PROJECT_DIR$/dog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-beans/dog-beans.iml" filepath="$PROJECT_DIR$/dog-beans/dog-beans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-domain/dog-domain.iml" filepath="$PROJECT_DIR$/dog-domain/dog-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-dubbo-api/dog-dubbo-api.iml" filepath="$PROJECT_DIR$/dog-dubbo-api/dog-dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-service/dog-service.iml" filepath="$PROJECT_DIR$/dog-service/dog-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-utils/dog-utils.iml" filepath="$PROJECT_DIR$/dog-utils/dog-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dog-web/dog-web.iml" filepath="$PROJECT_DIR$/dog-web/dog-web.iml" />
+    </modules>
+  </component>
+</project>

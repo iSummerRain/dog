@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.dog</groupId>
+	<artifactId>dog-utils</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>dog-utils</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>com.dog</groupId>
+		<artifactId>dog</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.dog</groupId>
+			<artifactId>dog-beans</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!--
+        <dependency>
+            <groupId>com.dog</groupId>
+            <artifactId>dog-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        -->
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit-dep</artifactId>
+            <version>4.11</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- quartz -->
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-digester3</artifactId>
+			<version>3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        -->
+	</dependencies>
+
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="consumer"/>
+    <!-- 注册中心的ip地址 集群以","分割-->
+    <dubbo:registry address="zookeeper://192.168.72.130:2181"/>
+    <!-- dubbo 扫描包路径 -->
+    <dubbo:annotation package="com.dog.web.controller"/>
+</beans>
