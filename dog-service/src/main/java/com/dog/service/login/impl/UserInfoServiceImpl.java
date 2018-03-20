@@ -37,7 +37,7 @@ dubbo中springboot的事务注解要是使用会引起服务提供不了...
     bean.getClass().getAnnotation(Service.class) 获取到.
     也就是说修改dubbo的Service注解，增加java.lang.annotation.Inherited
 1.2、在application.properties增加启用spring AOP使用CGlib代理：spring.aop.proxy-target-class=true
-1.3、修改使用 @Service(version = "1.0.0") 为 @Service(version = "1.0.0")
+1.3、修改使用 @Service(version = "1.0.0") 为 @Service(version = "1.0.0", interfaceName="com.dog.api.IUserInfoService")
 
  */
 public class UserInfoServiceImpl implements IUserInfoService {
