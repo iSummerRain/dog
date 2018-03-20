@@ -6,8 +6,9 @@ import com.dog.api.IUserInfoService;
 import com.dog.beans.login.UserBean;
 import com.dog.domain.user.UserInfoRepository;
 import com.dog.domain.user.jdbcTemplate.UserInfoJdbcTemplate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -42,7 +43,7 @@ dubbo中springboot的事务注解要是使用会引起服务提供不了...
  */
 public class UserInfoServiceImpl implements IUserInfoService {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserInfoServiceImpl.class);
+    private static final Log logger = LogFactory.getLog(UserInfoServiceImpl.class);
 
     @Autowired
     private UserInfoRepository userInfoRepository;

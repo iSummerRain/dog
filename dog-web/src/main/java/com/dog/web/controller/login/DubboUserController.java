@@ -7,8 +7,8 @@ import com.dog.utils.common.Constants;
 import com.dog.utils.common.DogResult;
 import com.dog.utils.common.JsonUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
  */
 public class DubboUserController {
 
-    private static final Logger logger = LoggerFactory.getLogger(DubboUserController.class);
+    private static final Log logger = LogFactory.getLog(DubboUserController.class);
 
     //web层调用dubbo服务提供的版本号
     @Reference(version = "1.0.0")

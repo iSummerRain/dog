@@ -6,8 +6,8 @@ package com.dog.service.login.impl;
 //import com.dog.service.jpa.DogPageable;
 //import com.dog.service.jpa.DogSort;
 import com.dog.service.login.IUserInfoSV;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.domain.Page;
 //import org.springframework.data.domain.PageRequest;
@@ -33,7 +33,7 @@ import com.dog.service.login.IUserInfoSV;
  */
 public class UserInfoSVImpl implements IUserInfoSV {
 //
-//    private static final Logger logger = LoggerFactory.getLogger(UserInfoSVImpl.class);
+//    private static final Log logger = LogFactory.getLog(UserInfoSVImpl.class);
 //
 ////    @Resource //【javax.annotation.Resource】Note that this annotation may appear on private fields and methods of superclasses
 //    //官方demo使用的是Autowired注解
