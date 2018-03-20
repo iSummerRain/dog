@@ -15,9 +15,15 @@ public interface UserInfoRepository extends JpaRepository<UserBean, String>,
         CrudRepository<UserBean, String> {
 
 //    @Transactional
-//    @Query("select p from users p where p.name=:name and p.age=:age")
-//    UserBean withNameAndAgeQuery(@Param("name") String name, @Param("age") String address);
+    /*
+    * 使用jpa自定义sql查询时，此时from后面的表名应为Entity对应定义的bean类名称，不应该是真正的表名，
+    * 例如：表名users对应映射的bean为UserBean，故@Query注解后面应使用bean类不应该是表名了！
+    * 否则springboot启动会报IllegalArgumentException
+     */
 
-//    @Query("select p from users p where p.id=:id")
+    @Query("select u from UserBean u where u.name=?1 and u.password=?2")
+    UserBean withNamePasswordQuery(@Param("name") String name, @Param("password") String password);
+
+//    @Query("select p from UserBean p where p.id=?1")
 //    UserBean getUserById(String id);
 }

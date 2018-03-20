@@ -16,6 +16,9 @@ public class UserBean implements Serializable {//使用JPA 映射数据库中表
     @Column(name = "name")
     private String name;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "age")
     private String age;
 
@@ -44,6 +47,14 @@ public class UserBean implements Serializable {//使用JPA 映射数据库中表
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAge() {

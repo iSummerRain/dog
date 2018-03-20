@@ -14,7 +14,7 @@ import java.io.IOException;
 
 //@Configuration
 @SpringBootApplication
-//@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy
 @EnableJpaRepositories
 //@EnableAutoConfiguration
 @EntityScan(basePackages = "com.dog.beans")
