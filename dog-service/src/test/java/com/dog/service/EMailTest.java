@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class EMailTest {
 
-    private String toEmailAddress = "liliang11@asiainfo.com";
+    private String toEmailAddress = "liliang11@xx.com";
 
     @Autowired
     private IEMailSV mailService;
@@ -62,6 +62,6 @@ public class EMailTest {
 //        context.setVariable("id", "006");
 //        String emailContent = templateEngine.process("emailTemplate", context);
 //
-//        mailService.sendHtmlMail("ityouknow@126.com","主题：这是模板邮件",emailContent);
+//        mailService.sendHtmlMail(toEmailAddress,"主题：这是模板邮件",emailContent);
     }
 }
