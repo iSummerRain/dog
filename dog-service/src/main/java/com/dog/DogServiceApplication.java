@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
 
@@ -17,6 +18,7 @@ import java.io.IOException;
 @EnableAspectJAutoProxy
 @EnableJpaRepositories
 //@EnableAutoConfiguration
+@EnableTransactionManagement
 @EntityScan(basePackages = "com.dog.beans")
 @ComponentScan(basePackages = {"com.dog.service","com.dog.domain"})
 
