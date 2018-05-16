@@ -6,7 +6,9 @@
     <file url="file://$PROJECT_DIR$/dog-domain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dog-dubbo-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dog-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dog-service/redis/redis-cluster-env-builder.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/dog-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dog-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dog-web/dubbo-war/dubbo.txt" charset="GBK" />
   </component>
 </project>
